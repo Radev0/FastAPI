@@ -9,7 +9,33 @@ class Msg(BaseModel):
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World. Welcome to FastAPI!"}
+    return [
+  {
+    "date": "2018-05-06",
+    "temperatureC": 1,
+    "summary": "Freezing"
+  },
+  {
+    "date": "2018-05-07",
+    "temperatureC": 14,
+    "summary": "Bracing"
+  },
+  {
+    "date": "2018-05-08",
+    "temperatureC": -13,
+    "summary": "Freezing"
+  },
+  {
+    "date": "2018-05-09",
+    "temperatureC": -16,
+    "summary": "Balmy"
+  },
+  {
+    "date": "2018-05-10",
+    "temperatureC": -2,
+    "summary": "Chilly"
+  }
+]
 
 
 @app.get("/path")
